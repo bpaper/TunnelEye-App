@@ -8,6 +8,7 @@ import {
     RECEIVE_MESSAGECONTENT,
     RECEIVE_MESSAGELISTS,
     RECEIVE_WEATHERINFO,
+    RECEIVE_PERSONINFO,
 } from './mutation-types'
 import state from './state'
 
@@ -26,5 +27,8 @@ export default {
     },
     [RECEIVE_WEATHERINFO](State: State, { weatherInfo }: any) {
         state.weatherInfo = weatherInfo
+    },
+    [RECEIVE_PERSONINFO](State: State, { personInfo }: any) {
+        state.personInfo = personInfo
     },
 }

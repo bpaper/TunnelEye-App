@@ -10,3 +10,5 @@ export const RECEIVE_WEATHERINFO = 'receive_weatherInfo'
 export const RECEIVE_MESSAGELISTS = 'receive_messageLists'
 //接收预警正文
 export const RECEIVE_MESSAGECONTENT = 'receive_messageContent'
+//接收人员信息
+export const RECEIVE_PERSONINFO = 'receive_personInfo'

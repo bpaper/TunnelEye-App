@@ -130,3 +130,28 @@ export const reqIP = () => {
         })
     })
 }
+
+// 获取人员出勤信息
+export const reqPersonInfo = (date: any) => {
+    let promise = axios({
+        method: 'get',
+        url: BASE_URL + '/PersonInfo',
+        headers: {
+            'Authorization': decrypt(sessionStorage.getItem("token"))
+        },
+        params: date
+    })
+
+    return new Promise<any>(function (resolve, reject) {
+        promise.then(function (response) {
+            // 成功了调用resolve()
+            resolve(response)
+        }).catch(function (error) {
+            //失败了调用reject()
+            reject(error)
+        })
+    })
+}
+
+
+// 获取所有下机位信息

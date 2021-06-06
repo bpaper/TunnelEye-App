@@ -9,4 +9,6 @@ export interface State {
     messageLists: {}
     // 预警信息正文
     messageContent: {}
+    //人员信息
+    personInfo: {}
 }

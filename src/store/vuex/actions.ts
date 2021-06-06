@@ -6,6 +6,7 @@ import {
     RECEIVE_WEATHERINFO,
     RECEIVE_MESSAGELISTS,
     RECEIVE_MESSAGECONTENT,
+    RECEIVE_PERSONINFO,
 } from './mutation-types'
 
 import {
@@ -14,6 +15,7 @@ import {
     reqWeatherInfo,
     reqMessageLists,
     reqMessageContent,
+    reqPersonInfo,
 } from '../../api/index'
 
 
@@ -56,7 +58,7 @@ export default {
         const result = await reqMessageLists(data)
         // 提交一个mutation
         const messageLists = result.data
-        commit(RECEIVE_WEATHERINFO, { messageLists })
+        commit(RECEIVE_MESSAGELISTS, { messageLists })
     },
 
     //异步获取预警消息正文
@@ -65,7 +67,15 @@ export default {
         const result = await reqMessageContent(data)
         // 提交一个mutation
         const messageContent = result.data
-        commit(RECEIVE_WEATHERINFO, { messageContent })
+        commit(RECEIVE_MESSAGECONTENT, { messageContent })
+    },
+    //异步获取人员出勤信息
+    async getPersonInfo({ commit }: any, data: any) {
+        //发送异步ajax请求
+        const result = await reqMessageContent(data)
+        // 提交一个mutation
+        const personInfo = result.data
+        commit(RECEIVE_PERSONINFO, { personInfo })
     }
 
 }

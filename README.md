@@ -31,3 +31,10 @@ npm run build --report
 8. 完成MessageList组件
 9. 完成FunctionTop组件
 10. 完成userInfo页面
+
+### 0.0.2
+1. 完成personList组件
+2. 完成personinfo界面
+3. 完成MessageContent页面
+4. 完成LocationInfo组件
+5. 正在完成Location页面部分

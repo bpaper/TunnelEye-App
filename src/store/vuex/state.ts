@@ -8,6 +8,7 @@ const state: State = {
     weatherInfo: {},
     messageLists: {},
     messageContent: {},
+    personInfo: {},
 }
 
 
